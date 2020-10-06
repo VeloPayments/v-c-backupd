@@ -1,0 +1,19 @@
+#ignore build directory
+build
+
+#subproject subdirectories
+subprojects/googletest
+subprojects/libevent
+subprojects/lmdb
+subprojects/minunit
+subprojects/vcblockchain
+subprojects/vccert
+subprojects/vccrypt
+subprojects/vcdb
+subprojects/vcmodel
+subprojects/vctool
+subprojects/vpr
+
+#ignore cscope artifacts
+cscope.*
+tags
