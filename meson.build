@@ -32,6 +32,8 @@ vcblockchain = dependency(
     fallback : ['vcblockchain', 'vcblockchain_dep']
 )
 
+vctool_sub = subproject('vctool')
+vctool_include = vctool_sub.get_variable('vctool_include')
 vctool = dependency(
     'vctool',
     required : true,
@@ -50,14 +52,14 @@ backupd_exe = executable(
     'backupd',
     './src/backupd/main.c',
     src_not_main,
-    include_directories : backupd_include,
-    dependencies : [threads, vcblockchain]
+    include_directories : [backupd_include, vctool_include],
+    dependencies : [threads, vcblockchain, vctool]
 )
 
 backupd_test = executable(
     'backupd-test',
     src_not_main, test_src,
-    include_directories : backupd_include,
+    include_directories : [backupd_include, vctool_include],
     dependencies : [threads, vcblockchain, minunit]
 )
 
