@@ -1,5 +1,5 @@
 [wrap-git]
 directory = vctool
-revision = 4dbcba83bbf07fe3d5e05457f8f0af2721f665d8
+revision = a6ed18250e40a12f0e9a6516756959cb0496292a
 url = git@github.com:velopayments/v-c-tool.git
 push-url = git@github.com:velopayments/v-c-tool.git
